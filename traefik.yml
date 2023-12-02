@@ -1,0 +1,11 @@
+api:
+  insecure: true
+
+providers:
+  file:
+    directory: /configurations
+
+experimental:
+  localPlugins:
+    flusher-response-writer:
+      moduleName: 'github.com/okkero/flusher_response_writer'

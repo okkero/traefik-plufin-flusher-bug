@@ -1,0 +1,8 @@
+displayName: Flusher Response Writer
+type: middleware
+
+import: github.com/okkero/flusher_response_writer
+
+summary: "Demonstrate that it is impossible for a custom plugin's http.ResponseWriter to implement http.Flusher"
+
+testData: {}

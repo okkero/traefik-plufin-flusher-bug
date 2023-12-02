@@ -1,0 +1,16 @@
+http:
+  routers:
+    router1:
+      service: backend-service
+      rule: "PathPrefix(`/backend-service`)"
+      middlewares:
+        - 'flusher-response-writer'
+  middlewares:
+    flusher-response-writer:
+      plugin:
+        flusher-response-writer: {}
+  services:
+    backend-service:
+      loadBalancer:
+        servers:
+          - url: "http://backend-service:80/"
